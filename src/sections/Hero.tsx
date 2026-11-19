@@ -10,7 +10,6 @@ const d = (ms: number) => ({ "--d": `${ms}ms` }) as React.CSSProperties;
 export function Hero({ ready }: { ready: boolean }) {
   return (
     <section
-      id="home"
       data-ready={ready}
       className="relative overflow-hidden pt-[calc(var(--header-h)+1.5rem)] pb-10 md:pb-14 lg:flex lg:min-h-[100dvh] lg:items-center lg:pt-[calc(var(--header-h)+1.5rem)] lg:pb-10"
     >

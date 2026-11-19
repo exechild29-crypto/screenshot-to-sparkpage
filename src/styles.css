@@ -139,6 +139,9 @@
     0 24px 48px -20px color-mix(in oklab, var(--brand-blue) 28%, transparent);
   --shadow-brand: 0 10px 28px -10px color-mix(in oklab, var(--brand-purple) 55%, transparent);
   --shadow-brand-lg: 0 18px 40px -12px color-mix(in oklab, var(--brand-red) 45%, transparent);
+  /* Edge of the About panel as it slides over the hero */
+  --shadow-slide: 0 -22px 56px -18px color-mix(in oklab, var(--navy) 30%, transparent),
+    0 -2px 10px -4px color-mix(in oklab, var(--navy) 10%, transparent);
 
   /* Motion */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -430,6 +433,47 @@
   }
   .hero-folds[data-live="true"] .hero-folds__canvas {
     opacity: 1;
+  }
+
+  /* ---------- Hero → About slide-over (homepage only) ---------- */
+  .hero-slide {
+    position: relative;
+  }
+  .hero-slide__anchor {
+    position: absolute;
+    inset: 0 0 auto;
+    height: var(--hero-h, 100vh);
+    pointer-events: none;
+  }
+  .hero-slide__stage {
+    position: relative;
+    z-index: 0;
+  }
+  /* Pin the hero once its bottom meets the viewport bottom (tall heroes scroll fully first). */
+  .hero-slide[data-armed="true"] .hero-slide__stage {
+    position: sticky;
+    top: min(0px, calc(100vh - var(--hero-h, 100vh)));
+    top: min(0px, calc(100svh - var(--hero-h, 100svh)));
+  }
+  .hero-slide__panel {
+    position: relative;
+    z-index: 1;
+    background-color: var(--background);
+  }
+  .hero-slide[data-armed="true"] .hero-slide__panel {
+    border-top-left-radius: calc((1 - var(--slide-p, 1)) * 2rem);
+    border-top-right-radius: calc((1 - var(--slide-p, 1)) * 2rem);
+  }
+  .hero-slide[data-armed="true"] .hero-slide__panel::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: -1;
+    height: 8rem;
+    border-radius: inherit;
+    box-shadow: var(--shadow-slide);
+    opacity: var(--slide-edge, 0);
+    pointer-events: none;
   }
 
   /* ---------- Why Manager ---------- */

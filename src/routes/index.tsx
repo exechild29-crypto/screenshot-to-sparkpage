@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { HeroSlideOver } from "@/components/site/HeroSlideOver";
 import { About } from "@/sections/About";
 import { GlobalPresence } from "@/sections/GlobalPresence";
 import { Hero } from "@/sections/Hero";
@@ -39,8 +40,9 @@ function Index() {
       <IntroAnimation onEnter={onEnter} />
       <Header />
       <main>
-        <Hero ready={ready} />
-        <About />
+        <HeroSlideOver hero={<Hero ready={ready} />}>
+          <About />
+        </HeroSlideOver>
         <GlobalPresence />
         <WhyManager />
       </main>
