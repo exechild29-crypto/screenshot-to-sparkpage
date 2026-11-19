@@ -343,6 +343,10 @@
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
   }
+  .intro__logo3d {
+    position: absolute;
+    inset: -24% -6%;
+  }
   .intro[data-phase="draw"] .intro__path,
   .intro[data-phase="reveal"] .intro__path,
   .intro[data-phase="zoom"] .intro__path {

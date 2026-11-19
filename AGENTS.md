@@ -32,3 +32,4 @@ use the editor.
 ## Application structure
 - The homepage is composed from independent sections in `src/sections/*`, with editable marketing copy centralized in `src/content/home.ts`; keep this separation so content and layout remain easy to maintain.
 - The homepage hero background effect lives in `src/lib/fold-wave.ts` (framework-free WebGL loop) mounted by `src/components/site/HeroFoldBackground.tsx`; keep per-frame state out of React and colors in the `--fold-*` CSS tokens so the effect stays cheap and themeable.
+- The intro's 3D infinity logo lives in `src/lib/infinity-3d.ts` (framework-free three.js, loaded with a dynamic import by `IntroAnimation`); the intro timeline waits for it on a white screen and falls back to the original SVG logo when WebGL is missing or slow, so the sequence never breaks.
