@@ -29,6 +29,8 @@ export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
   { label: "Solutions", soon: true },
   { label: "Why Manager", href: "#why-manager" },
+  { label: "Whom We Serve", href: "#industries" },
+  { label: "What We Do", href: "#what-we-do" },
   { label: "Contact", href: "#contact" },
 ];
 
