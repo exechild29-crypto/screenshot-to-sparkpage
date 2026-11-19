@@ -149,3 +149,124 @@ export const whyManager = {
     },
   ] satisfies Feature[],
 };
+
+/** A future detail page. Until `live` is true the card points somewhere safe (see `exploreHref`). */
+export type PlannedLink = { route: `/${string}`; live: boolean };
+
+export type Industry = {
+  id: "education" | "startups" | "ecommerce-retail";
+  num: string;
+  title: string;
+  headline: string;
+  text: string;
+  focus: string[];
+  accent: "blue" | "purple" | "red";
+  imageAlt: string;
+  link: PlannedLink;
+};
+
+export const whomWeServe = {
+  eyebrow: "Whom We Serve",
+  heading: { lead: "Technology designed around", highlight: "the way your industry works." },
+  body: "Every industry has different challenges. We develop software and automation solutions that help businesses simplify operations, improve coordination, and move forward with confidence.",
+  exploreLabel: "Explore Solutions",
+  industries: [
+    {
+      id: "education",
+      num: "01",
+      title: "Education",
+      headline: "Smarter Management for Better Learning Environments.",
+      text: "Empower educational institutions with connected digital systems that simplify administration, improve coordination, and support better institutional management.",
+      focus: ["Student and admission management", "Administrative workflows", "Fee and record management", "Institutional communication"],
+      accent: "blue",
+      imageAlt: "Two students working together on laptops in a bright, modern campus library",
+      link: { route: "/industries/education", live: false },
+    },
+    {
+      id: "startups",
+      num: "02",
+      title: "Start-ups",
+      headline: "Build Faster. Manage Smarter. Scale Better.",
+      text: "Help growing businesses establish efficient processes, manage customers, automate operations, and build a stronger foundation for sustainable growth.",
+      focus: ["CRM and customer management", "Workflow automation", "Business process coordination", "Operational visibility"],
+      accent: "purple",
+      imageAlt: "A start-up team planning together at a whiteboard covered with notes in a sunny loft office",
+      link: { route: "/industries/startups", live: false },
+    },
+    {
+      id: "ecommerce-retail",
+      num: "03",
+      title: "E-commerce & Retail",
+      headline: "Connect Every Part of Your Commerce Business.",
+      text: "Simplify commerce operations through connected systems that help manage products, orders, inventory, customers, and everyday sales activities.",
+      focus: ["Order management", "Inventory workflows", "Customer management", "Sales operations"],
+      accent: "red",
+      imageAlt: "A shop owner packing a customer order at a clean counter, with stocked shelves and an order tablet behind her",
+      link: { route: "/industries/ecommerce-retail", live: false },
+    },
+  ] satisfies Industry[],
+  closing: {
+    title: "Different industries. One smarter approach.",
+    text: "We bring software, automation, and intelligent systems together to address the unique challenges of every business.",
+  },
+};
+
+export type Capability = {
+  id: "business-software" | "workflow-automation" | "crm-erp" | "ai-systems";
+  num: string;
+  title: string;
+  headline: string;
+  text: string;
+  size: "large" | "small";
+  link: PlannedLink;
+};
+
+export const whatWeDo = {
+  eyebrow: "What We Do",
+  heading: { lead: "Technology that works", highlight: "for your business." },
+  body: "From custom software to intelligent automation, we build systems that make everyday business operations simpler, smarter, and more connected.",
+  exploreLabel: "Explore Solutions",
+  capabilities: [
+    {
+      id: "business-software",
+      num: "01",
+      title: "Business Software",
+      headline: "Software Built Around Your Business.",
+      text: "Purpose-built software designed to support your organization's unique requirements, processes, and operational goals.",
+      size: "large",
+      link: { route: "/solutions/business-software", live: false },
+    },
+    {
+      id: "workflow-automation",
+      num: "02",
+      title: "Workflow Automation",
+      headline: "Make Workflows Work Smarter.",
+      text: "Connect business processes, reduce repetitive tasks, and simplify the way work gets done.",
+      size: "small",
+      link: { route: "/solutions/workflow-automation", live: false },
+    },
+    {
+      id: "crm-erp",
+      num: "03",
+      title: "CRM & ERP Systems",
+      headline: "Bring Your Business Together.",
+      text: "Create connected management systems that help organizations coordinate customers, resources, and operations.",
+      size: "small",
+      link: { route: "/solutions/crm-erp", live: false },
+    },
+    {
+      id: "ai-systems",
+      num: "04",
+      title: "AI-Powered Systems",
+      headline: "Make Intelligence Part of Your Operations.",
+      text: "Integrate intelligent capabilities into business systems to support smarter workflows and business processes.",
+      size: "large",
+      link: { route: "/solutions/ai-systems", live: false },
+    },
+  ] satisfies Capability[],
+  closing: {
+    lead: "One business. Multiple possibilities.",
+    highlight: "Smarter technology.",
+    text: "We bring software, automation, and intelligent systems together to help businesses operate with greater clarity and efficiency.",
+  },
+};

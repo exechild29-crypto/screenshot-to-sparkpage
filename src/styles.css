@@ -476,6 +476,134 @@
     pointer-events: none;
   }
 
+  /* ---------- Software UI mockups (Whom We Serve / What We Do) ---------- */
+  .ui-mock {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-float);
+    color: var(--foreground);
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+  .ui-label {
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+
+  /* ---------- Whom We Serve ---------- */
+  .ind-blue { --ind: var(--brand-blue); }
+  .ind-purple { --ind: var(--brand-purple); }
+  .ind-red { --ind: var(--brand-red); }
+  .ui-ind-text { color: var(--ind); }
+  .ui-ind-fill { background-color: var(--ind); }
+  .ui-ind-chip {
+    color: var(--ind);
+    background-color: color-mix(in oklab, var(--ind) 10%, var(--background));
+  }
+  .industry-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--shadow-soft);
+    transition:
+      transform 300ms var(--ease-out),
+      box-shadow 300ms var(--ease-out),
+      border-color 300ms var(--ease-out);
+  }
+  .industry-card:hover,
+  .industry-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-float);
+    border-color: color-mix(in oklab, var(--ind) 38%, var(--border));
+  }
+  .industry-card__media {
+    overflow: hidden;
+    border-radius: calc(var(--radius-3xl) - 1px) calc(var(--radius-3xl) - 1px) 0 0;
+    background: var(--muted);
+  }
+  /* One-time gentle scale-in on reveal (outer), restrained hover zoom (inner) */
+  .industry-photo {
+    transform: scale(1.08);
+    transition: transform 1.4s var(--ease-out);
+    transition-delay: var(--d, 0ms);
+  }
+  .is-in .industry-photo { transform: none; }
+  .industry-photo__img {
+    filter: saturate(0.92);
+    transition: transform 500ms var(--ease-out);
+  }
+  .industry-card:hover .industry-photo__img,
+  .industry-card:focus-visible .industry-photo__img {
+    transform: scale(1.03);
+  }
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .industry-card.md\:max-lg\:grid .industry-card__media {
+      border-radius: calc(var(--radius-3xl) - 1px) 0 0 calc(var(--radius-3xl) - 1px);
+    }
+  }
+
+  /* ---------- What We Do ---------- */
+  .what-we-do {
+    background:
+      radial-gradient(ellipse at 15% 15%, color-mix(in oklab, var(--brand-blue) 5.5%, transparent), transparent 42%),
+      radial-gradient(ellipse at 85% 80%, color-mix(in oklab, var(--brand-purple) 4.5%, transparent), transparent 42%),
+      var(--background);
+  }
+  .bento-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--shadow-soft);
+    transition:
+      transform 280ms var(--ease-out),
+      box-shadow 280ms var(--ease-out);
+  }
+  /* Blue → purple border that fades in on hover */
+  .bento-card::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(120deg, color-mix(in oklab, var(--brand-blue) 55%, transparent), color-mix(in oklab, var(--brand-purple) 55%, transparent));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    opacity: 0;
+    transition: opacity 280ms var(--ease-out);
+    pointer-events: none;
+  }
+  .bento-card:hover,
+  .bento-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-float);
+  }
+  .bento-card:hover::after,
+  .bento-card:focus-visible::after { opacity: 1; }
+  .bento-card__stage {
+    background: linear-gradient(to bottom, var(--surface), color-mix(in oklab, var(--accent) 60%, var(--surface)));
+    border-top: 1px solid var(--border);
+  }
+  .bento-card__mock {
+    transform-origin: 50% 100%;
+    transition: transform 300ms var(--ease-out);
+  }
+  .bento-card:hover .bento-card__mock,
+  .bento-card:focus-visible .bento-card__mock { transform: scale(1.02); }
+  .bento-card__stage .ui-mock {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   /* ---------- Why Manager ---------- */
   .feature-item {
     position: relative;
