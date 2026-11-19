@@ -54,7 +54,7 @@ export function Hero({ ready }: { ready: boolean }) {
           <ul className="hero-enter mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4" style={d(660)}>
             {hero.pillars.map(({ icon: Icon, title, sub }) => (
               <li key={title} className="flex flex-col gap-2">
-                <span className="inline-flex size-10 items-center justify-center rounded-xl bg-accent text-brand-purple">
+                <span className="icon-glow inline-flex size-10 items-center justify-center rounded-xl bg-accent text-brand-purple">
                   <Icon className="size-5" />
                 </span>
                 <span className="text-sm leading-tight">

@@ -156,6 +156,23 @@
   background-image: var(--gradient-brand);
 }
 
+/* Soft brand-coloured glow behind the hero pillar icons */
+@utility icon-glow {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    z-index: -1;
+    border-radius: 1.1rem;
+    background-image: var(--gradient-brand);
+    opacity: 0.28;
+    filter: blur(12px);
+  }
+}
+
 @utility text-gradient {
   background-image: var(--gradient-text);
   -webkit-background-clip: text;
