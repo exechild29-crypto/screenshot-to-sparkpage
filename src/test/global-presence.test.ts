@@ -14,9 +14,9 @@ describe("Global Presence locations", () => {
   });
 
   it("lists California, United States as coming soon", () => {
-    expect(byId.california?.status).toBe("coming-soon");
-    expect(byId.california?.statusLabel).toBe("Coming Soon");
-    expect(byId.california?.country).toBe("United States");
+    expect(byId["california"]?.status).toBe("coming-soon");
+    expect(byId["california"]?.statusLabel).toBe("Coming Soon");
+    expect(byId["california"]?.country).toBe("United States");
   });
 
   it("places every marker inside the map, California west of Dubai and Dubai west of India", () => {
@@ -29,10 +29,10 @@ describe("Global Presence locations", () => {
       expect(point.y).toBeGreaterThan(0);
       expect(point.y).toBeLessThan(MAP_HEIGHT);
     }
-    const california = points.california;
-    const dubai = points.dubai;
-    const mangalore = points.mangalore;
-    const bangalore = points.bangalore;
+    const california = points["california"];
+    const dubai = points["dubai"];
+    const mangalore = points["mangalore"];
+    const bangalore = points["bangalore"];
     expect(california).toBeDefined();
     expect(dubai).toBeDefined();
     expect(mangalore).toBeDefined();

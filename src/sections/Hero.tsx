@@ -1,6 +1,7 @@
 import { ArrowRight, Sparkles, Check, Database, Cpu, ShieldCheck, Workflow } from "lucide-react";
 
 import infinity3d from "@/assets/infinity-3d.jpg";
+import { HeroFoldBackground } from "@/components/site/HeroFoldBackground";
 import { Button } from "@/components/ui/button";
 import { hero } from "@/content/home";
 
@@ -13,6 +14,7 @@ export function Hero({ ready }: { ready: boolean }) {
       data-ready={ready}
       className="relative overflow-hidden pt-[calc(var(--header-h)+1.5rem)] pb-10 md:pb-14 lg:flex lg:min-h-[100dvh] lg:items-center lg:pt-[calc(var(--header-h)+1.5rem)] lg:pb-10"
     >
+      <HeroFoldBackground />
       <div className="bg-ambient pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="container-site relative grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.02fr_1fr] lg:gap-10">
         {/* Copy */}
