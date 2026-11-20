@@ -158,14 +158,14 @@ function HeroVisual() {
       </div>
 
       {/* CRM */}
-      <div className="glass-card float-c absolute bottom-[10%] left-[2%] hidden w-[40%] p-3 sm:block sm:p-4">
-        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">CRM</p>
+      <div className="glass-card float-c absolute bottom-[10%] left-[2%] w-[40%] p-3 sm:p-4">
+        <p className="text-[0.65rem] font-semibold uppercase tracking-wider text-muted-foreground sm:text-xs">CRM</p>
         <div className="mt-2 flex -space-x-2">
           {["bg-brand-blue", "bg-brand-purple", "bg-brand-magenta", "bg-brand-red"].map((c) => (
-            <span key={c} className={`size-7 rounded-full border-2 border-background ${c}`} />
+            <span key={c} className={`size-6 rounded-full border-2 border-background sm:size-7 ${c}`} />
           ))}
         </div>
-        <p className="mt-2 font-display text-sm font-bold text-foreground">Pipeline in sync</p>
+        <p className="mt-2 font-display text-xs font-bold text-foreground sm:text-sm">Pipeline in sync</p>
       </div>
 
       {/* Workflow */}
