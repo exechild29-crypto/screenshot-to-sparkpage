@@ -6,6 +6,15 @@ import { MAP_HEIGHT, MAP_WIDTH, project } from "@/lib/world-map";
 const byId = Object.fromEntries(globalPresence.locations.map((location) => [location.id, location]));
 
 describe("Global Presence locations", () => {
+  it("orders and numbers Bangalore, Mangalore, Dubai and California", () => {
+    expect(globalPresence.locations.map(({ id, num }) => [id, num])).toEqual([
+      ["bangalore", "01"],
+      ["mangalore", "02"],
+      ["dubai", "03"],
+      ["california", "04"],
+    ]);
+  });
+
   it("lists Dubai, Mangalore and Bangalore as operational", () => {
     for (const id of ["dubai", "mangalore", "bangalore"] as const) {
       expect(byId[id]?.status).toBe("operational");

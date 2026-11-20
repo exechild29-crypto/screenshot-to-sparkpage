@@ -88,9 +88,9 @@ export const globalPresence = {
   note: "Markers show approximate city and region locations.",
   comingSoonMessage: "Expanding our reach",
   locations: [
-    { id: "dubai", num: "01", name: "Dubai", country: "United Arab Emirates", status: "operational", statusLabel: "Operational Location", accent: "blue", lat: 25.2048, lon: 55.2708 },
+    { id: "bangalore", num: "01", name: "Bangalore", country: "India", status: "operational", statusLabel: "Operational Location", accent: "red", lat: 12.9716, lon: 77.5946 },
     { id: "mangalore", num: "02", name: "Mangalore", country: "India", status: "operational", statusLabel: "Operational Location", accent: "purple", lat: 12.9141, lon: 74.856 },
-    { id: "bangalore", num: "03", name: "Bangalore", country: "India", status: "operational", statusLabel: "Operational Location", accent: "red", lat: 12.9716, lon: 77.5946 },
+    { id: "dubai", num: "03", name: "Dubai", country: "United Arab Emirates", status: "operational", statusLabel: "Operational Location", accent: "blue", lat: 25.2048, lon: 55.2708 },
     { id: "california", num: "04", name: "California", country: "United States", status: "coming-soon", statusLabel: "Coming Soon", accent: "muted", lat: 36.7783, lon: -119.4179 },
   ] satisfies PresenceLocation[],
 };
