@@ -1,5 +1,3 @@
-import { ArrowRight, Check } from "lucide-react";
-
 import educationImg from "@/assets/industry-education.jpg";
 import retailImg from "@/assets/industry-retail.jpg";
 import startupsImg from "@/assets/industry-startups.jpg";
@@ -32,7 +30,7 @@ export function WhomWeServe() {
           </p>
         </div>
 
-        <ul className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:mt-10 lg:grid-cols-3 lg:gap-6">
+        <ul className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:mt-7 lg:grid-cols-3 lg:gap-6">
           {industries.map((ind, i) => (
             <li
               key={ind.id}
@@ -66,7 +64,7 @@ function IndustryCard({ ind, index, wideOnTablet }: { ind: Industry; index: numb
       )}
     >
       <div className="relative">
-        <div className={cn("industry-card__media aspect-[4/3]", wideOnTablet && "md:max-lg:aspect-auto md:max-lg:h-full")}>
+        <div className="industry-card__media aspect-[4/3]">
           <div className="industry-photo size-full" style={d(450 + index * 130)}>
             <img
               src={photos[ind.id]}
@@ -91,28 +89,13 @@ function IndustryCard({ ind, index, wideOnTablet }: { ind: Industry; index: numb
         </div>
       </div>
 
-      <div className={cn("flex flex-1 flex-col p-5 pt-10 sm:p-6 sm:pt-11", wideOnTablet && "md:max-lg:pt-6")}>
+      <div className={cn("flex flex-1 flex-col p-5 pt-10 sm:px-6 sm:pb-6 sm:pt-11", wideOnTablet && "md:max-lg:justify-center md:max-lg:pt-6")}>
         <p className="ui-ind-text flex items-center gap-2 font-display text-xs font-bold uppercase tracking-[0.18em]">
           <span className="text-muted-foreground">{ind.num}</span>
           <span className="ui-ind-fill h-px w-5" />
           {ind.title}
         </p>
         <h3 className="mt-2.5 text-xl font-semibold leading-snug text-foreground">{ind.headline}</h3>
-        <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">{ind.text}</p>
-        <ul className="mt-4 space-y-2">
-          {ind.focus.map((f) => (
-            <li key={f} className="flex items-start gap-2.5 text-sm text-foreground">
-              <span className="ui-ind-chip mt-0.5 inline-flex size-4 shrink-0 items-center justify-center rounded-full">
-                <Check className="size-2.5" />
-              </span>
-              {f}
-            </li>
-          ))}
-        </ul>
-        <span className="ui-ind-text mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold">
-          {whomWeServe.exploreLabel}
-          <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
-        </span>
       </div>
     </a>
   );
