@@ -21,7 +21,7 @@ export function WhomWeServe() {
   const { industries, closing } = whomWeServe;
 
   return (
-    <section id="industries" ref={ref} className={cn("section-pad relative overflow-hidden", inView && "is-in")}>
+    <section id="industries" ref={ref} className={cn("section-pad relative overflow-hidden !pb-8 lg:!pb-10", inView && "is-in")}>
       <div className="container-site relative">
         <div className="grid items-end gap-4 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
           <SectionHeading eyebrow={whomWeServe.eyebrow} lead={whomWeServe.heading.lead} highlight={whomWeServe.heading.highlight} />
@@ -42,7 +42,7 @@ export function WhomWeServe() {
           ))}
         </ul>
 
-        <div className="reveal mt-10 flex flex-col gap-3 border-t border-border pt-7 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:mt-12" style={d(800)}>
+        <div className="reveal mt-7 flex flex-col gap-1.5 border-t border-border pt-4 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:mt-8" style={d(800)}>
           <p className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
             {closing.title.split(". ")[0]}. <span className="text-gradient">{closing.title.split(". ")[1]}</span>
           </p>
