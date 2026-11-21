@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 import educationImg from "@/assets/industry-education.jpg";
 import retailImg from "@/assets/industry-retail.jpg";
 import startupsImg from "@/assets/industry-startups.jpg";
@@ -96,6 +98,10 @@ function IndustryCard({ ind, index, wideOnTablet }: { ind: Industry; index: numb
           {ind.title}
         </p>
         <h3 className="mt-2.5 text-xl font-semibold leading-snug text-foreground">{ind.headline}</h3>
+        <span className="ui-ind-text mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold">
+          {whomWeServe.exploreLabel}
+          <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-focus-visible:translate-x-1" />
+        </span>
       </div>
     </a>
   );
