@@ -3,10 +3,6 @@
  * Change copy here; sections read from this file.
  */
 import {
-  BarChart3,
-  Users,
-  SquareCheckBig,
-  TrendingUp,
   Network,
   LineChart,
   UserCheck,
@@ -40,12 +36,6 @@ export const hero = {
   body: "DevOps Manager builds business software, workflow automation, CRM, ERP and AI-powered systems that bring every part of your operations into one clear, connected place.",
   primaryCta: { label: "Explore Our Solutions", href: "#about" },
   secondaryCta: { label: "Contact Us", href: "#contact" },
-  pillars: [
-    { icon: BarChart3, title: "Projects", sub: "Made Simple" },
-    { icon: Users, title: "Teams", sub: "More Productive" },
-    { icon: SquareCheckBig, title: "Work", sub: "Better Organised" },
-    { icon: TrendingUp, title: "Business", sub: "Ready to Scale" },
-  ] satisfies { icon: LucideIcon; title: string; sub: string }[],
 };
 
 export const about = {
