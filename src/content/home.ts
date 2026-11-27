@@ -52,7 +52,7 @@ export const about = {
     { title: "AI-Powered Solutions", text: "Insights and forecasts built in." },
   ],
   audiences: ["Educational institutions", "Startups", "E-commerce & retail"],
-  modules: ["CRM", "ERP", "Workflows", "Analytics", "AI Engine", "Finance"],
+  modules: ["CRM", "ERP", "Workflows", "Analytics", "HR", "AI Engine", "Finance", "Stocks", "Features"],
 };
 
 export type LocationStatus = "operational" | "coming-soon";
