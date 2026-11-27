@@ -43,7 +43,6 @@ export const about = {
   heading: { lead: "Technology That Makes Business Management", highlight: "Smarter." },
   paragraphs: [
     "DevOps Manager LLP designs software automation and intelligent management systems for organisations that want less friction and more control. We connect the people, processes and data behind your business so everyday work runs on clear, reliable systems.",
-    "From educational institutions to fast-moving startups and retail brands, we build solutions that fit how you actually operate — and grow with you as you scale.",
   ],
   areas: [
     { title: "Business Management Software", text: "One suite for daily operations." },
