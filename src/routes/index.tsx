@@ -11,6 +11,7 @@ import { Hero } from "@/sections/Hero";
 import { IntroAnimation } from "@/sections/IntroAnimation";
 import { WhatWeDo } from "@/sections/WhatWeDo";
 import { WhomWeServe } from "@/sections/WhomWeServe";
+import { WhyManager } from "@/sections/WhyManager";
 
 const title = "DevOps Manager LLP — Modern Business Management Suite";
 const description =
@@ -47,6 +48,7 @@ function Index() {
         </HeroSlideOver>
         <Founders />
         <WhomWeServe />
+        <WhyManager />
         <WhatWeDo />
         <GlobalPresence />
       </main>
