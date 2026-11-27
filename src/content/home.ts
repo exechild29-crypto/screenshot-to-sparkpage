@@ -23,10 +23,10 @@ export type NavItem = { label: string; href?: `#${string}`; soon?: boolean };
 export const navItems: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Solutions", soon: true },
-  { label: "Why Manager", href: "#why-manager" },
+  { label: "Founders", href: "#founders" },
   { label: "Whom We Serve", href: "#industries" },
   { label: "What We Do", href: "#what-we-do" },
+  { label: "Locations", href: "#global-presence" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -260,4 +260,23 @@ export const whatWeDo = {
     highlight: "Smarter technology.",
     text: "We bring software, automation, and intelligent systems together to help businesses operate with greater clarity and efficiency.",
   },
+};
+
+export type Founder = {
+  name: string;
+  role: string;
+  /** Image URL (e.g. an imported asset's url). */
+  photo?: string;
+  bio?: string;
+  links?: { label: string; href: string }[];
+};
+
+export const founders = {
+  eyebrow: "Founders",
+  heading: { lead: "Meet Our", highlight: "Founders" },
+  body: "The people behind DevOps Manager LLP. Founder profiles will be shared here soon.",
+  /** Add founder profiles here; placeholder cards show while this is empty. */
+  profiles: [] as Founder[],
+  placeholderCount: 2,
+  placeholder: { title: "Founder profile", text: "Coming soon" },
 };

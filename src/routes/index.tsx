@@ -5,12 +5,12 @@ import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { HeroSlideOver } from "@/components/site/HeroSlideOver";
 import { About } from "@/sections/About";
+import { Founders } from "@/sections/Founders";
 import { GlobalPresence } from "@/sections/GlobalPresence";
 import { Hero } from "@/sections/Hero";
 import { IntroAnimation } from "@/sections/IntroAnimation";
 import { WhatWeDo } from "@/sections/WhatWeDo";
 import { WhomWeServe } from "@/sections/WhomWeServe";
-import { WhyManager } from "@/sections/WhyManager";
 
 const title = "DevOps Manager LLP — Modern Business Management Suite";
 const description =
@@ -45,10 +45,10 @@ function Index() {
         <HeroSlideOver hero={<Hero ready={ready} />}>
           <About />
         </HeroSlideOver>
-        <GlobalPresence />
-        <WhyManager />
+        <Founders />
         <WhomWeServe />
         <WhatWeDo />
+        <GlobalPresence />
       </main>
       <Footer />
     </>
